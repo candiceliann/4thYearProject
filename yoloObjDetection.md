@@ -1,4 +1,4 @@
-googel drive link to download:
+google drive link to download:
 https://drive.google.com/drive/folders/1mr7u4xbx2WG24jI1o4o01c3Aa-yUK54U?usp=sharing
 
 then in terminal to run:
