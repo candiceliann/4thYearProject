@@ -10,11 +10,11 @@ import numpy as np
 import tensorflow as tf
 import tqdm
 
-from config import global_config
-from lanenet_model import lanenet
-from lanenet_model import lanenet_postprocess
+from LaneNet.config import global_config
+from LaneNet.lanenet_model import lanenet
+from LaneNet.lanenet_model import lanenet_postprocess
 
-from tools import evaluate_model_utils
+from LaneNet.tools import evaluate_model_utils
 import json
 CFG = global_config.cfg
 
@@ -25,14 +25,18 @@ def init_args():
     :return:
     """
     parser = argparse.ArgumentParser()
-    parser.add_argument('--image_dir', type=str, help='The source tusimple lane test data dir')
-    parser.add_argument('--weights_path', type=str, help='The model weights path')
-    parser.add_argument('--json_save', type=bool, help='Save inference data to file inf_data.json (True/False')
-    #parser.add_argument('--save_dir', type=str, help='The test output save root dir')
-    return parser.parse_args()
+    parser.add_argument('--input', required=True,
+        help='path to input image')
+    parser.add_argument('--lanenet_weights', required=True,
+        help='The model weights path')
+    parser.add_argument('--json_save', type=bool,
+        help='Save inference data to file inf_data.json (True/False')
+    parser.add_argument('--output', type=str,
+        help='The test output save root dir')
+    return vars(parser.parse_args())
 
 
-def test_lanenet_batch(src_dir, weights_path, save_json=False, save_dir):
+def test_lanenet_batch(src_dir, weights_path, save_dir, save_json=True):
     """
 
     :param src_dir:
@@ -82,38 +86,36 @@ def test_lanenet_batch(src_dir, weights_path, save_json=False, save_dir):
                 feed_dict={input_tensor: [image]}
             )
             avg_time_cost.append(time.time() - t_start)
-            image_name = image_path.split('test_set/')[1]
+            image_name = image_path.split('/')[-1]
             postprocess_result = postprocessor.postprocess(
                 binary_seg_result=binary_seg_image[0],
                 instance_seg_result=instance_seg_image[0],
-                source_image=image_vis, 
+                source_image=image_vis,
                 raw_file=image_name
             )
             lane_list.append(postprocess_result['lane_data'])
             if save_json == True:
                 if os.path.isfile('inf_data.json'):
-                    with open('inf_data.json', 'a+') as json_file: 
+                    with open('inf_data.json', 'a+') as json_file:
                         json.dump(postprocess_result['lane_data'], json_file)
                         json_file.write('\n')
                 else:
                     with open('inf_data.json', 'w+') as json_file:
                         json.dump(postprocess_result['lane_data'], json_file)
                         json_file.write('\n')
-            image_name = image_path.split('test_set/')[1]
+            image_name = image_path.split('/')[-1]
             if index % 10 == 0:
                 log.info('Mean inference time every single image: {:.5f}s'.format(np.mean(avg_time_cost)))
                 avg_time_cost.clear()
 
-       
-            #input_image_dir = ops.split(image_path.split('clips')[1])[0][1:]
-            #input_image_name = ops.split(image_path)[1]
-            #output_image_dir = ops.join(save_dir, input_image_dir)
-            #os.makedirs(output_image_dir, exist_ok=True)
-            #output_image_path = ops.join(output_image_dir, input_image_name)
-            #if ops.exists(output_image_path):
-            #    continue
 
-            #cv2.imwrite(output_image_path, postprocess_result['source_image'])
+            input_image_dir = image_path.split('/')[-2]
+            input_image_name = image_path.split('/')[-1]
+            output_image_dir = save_dir
+            os.makedirs(output_image_dir, exist_ok=True)
+            output_image_path = ops.join(output_image_dir, input_image_name)
+            if ops.exists(output_image_path):
+                cv2.imwrite(output_image_path, postprocess_result['source_image'])
 
     return lane_list
 
@@ -126,9 +128,9 @@ if __name__ == '__main__':
     args = init_args()
 
     inference_data = test_lanenet_batch(
-        src_dir=args.image_dir,
-        weights_path=args.weights_path,
-        save_json=args.json_save#,
-        #save_dir=args.save_dir
+        src_dir=args.input,
+        weights_path=args.lanenet_weights,
+        save_json=args.json_save,
+        save_dir=args.output
     )
     print(inference_data)

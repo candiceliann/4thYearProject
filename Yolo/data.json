@@ -1,0 +1,1387 @@
+[
+    {
+        "1479502313732054379.jpg": [
+            {
+                "xmin": 1311,
+                "ymin": 556,
+                "xmax": 1884,
+                "ymax": 822,
+                "Label": "car"
+            },
+            {
+                "xmin": 915,
+                "ymin": 312,
+                "xmax": 943,
+                "ymax": 374,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 568,
+                "ymin": 270,
+                "xmax": 601,
+                "ymax": 337,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 1226,
+                "ymin": 561,
+                "xmax": 1400,
+                "ymax": 650,
+                "Label": "car"
+            },
+            {
+                "xmin": 525,
+                "ymin": 507,
+                "xmax": 1029,
+                "ymax": 888,
+                "Label": "car"
+            },
+            {
+                "xmin": 0,
+                "ymin": 416,
+                "xmax": 232,
+                "ymax": 1007,
+                "Label": "car"
+            },
+            {
+                "xmin": 225,
+                "ymin": 560,
+                "xmax": 341,
+                "ymax": 631,
+                "Label": "car"
+            },
+            {
+                "xmin": 150,
+                "ymin": 551,
+                "xmax": 242,
+                "ymax": 622,
+                "Label": "car"
+            },
+            {
+                "xmin": 1823,
+                "ymin": 569,
+                "xmax": 1925,
+                "ymax": 665,
+                "Label": "car"
+            },
+            {
+                "xmin": 1254,
+                "ymin": 460,
+                "xmax": 1274,
+                "ymax": 490,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 95,
+                "ymin": 1062,
+                "xmax": 1843,
+                "ymax": 1201,
+                "Label": "car"
+            },
+            {
+                "xmin": 1408,
+                "ymin": 462,
+                "xmax": 1427,
+                "ymax": 498,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 857,
+                "ymin": 356,
+                "xmax": 883,
+                "ymax": 407,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 681,
+                "ymin": 356,
+                "xmax": 704,
+                "ymax": 404,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 483,
+                "ymin": 592,
+                "xmax": 573,
+                "ymax": 643,
+                "Label": "car"
+            },
+            {
+                "xmin": 382,
+                "ymin": 609,
+                "xmax": 474,
+                "ymax": 659,
+                "Label": "car"
+            },
+            {
+                "xmin": 559,
+                "ymin": 520,
+                "xmax": 690,
+                "ymax": 641,
+                "Label": "truck"
+            },
+            {
+                "xmin": 714,
+                "ymin": 559,
+                "xmax": 802,
+                "ymax": 631,
+                "Label": "car"
+            },
+            {
+                "xmin": 794,
+                "ymin": 559,
+                "xmax": 859,
+                "ymax": 617,
+                "Label": "car"
+            },
+            {
+                "xmin": 7,
+                "ymin": 607,
+                "xmax": 166,
+                "ymax": 648,
+                "Label": "car"
+            },
+            {
+                "xmin": 964,
+                "ymin": 550,
+                "xmax": 1085,
+                "ymax": 618,
+                "Label": "car"
+            },
+            {
+                "xmin": 1142,
+                "ymin": 441,
+                "xmax": 1166,
+                "ymax": 489,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 510,
+                "ymin": 553,
+                "xmax": 639,
+                "ymax": 643,
+                "Label": "car"
+            },
+            {
+                "xmin": 736,
+                "ymin": 571,
+                "xmax": 787,
+                "ymax": 608,
+                "Label": "car"
+            },
+            {
+                "xmin": 1599,
+                "ymin": 570,
+                "xmax": 1919,
+                "ymax": 760,
+                "Label": "car"
+            },
+            {
+                "xmin": 905,
+                "ymin": 566,
+                "xmax": 968,
+                "ymax": 608,
+                "Label": "car"
+            },
+            {
+                "xmin": 820,
+                "ymin": 573,
+                "xmax": 912,
+                "ymax": 634,
+                "Label": "car"
+            },
+            {
+                "xmin": 986,
+                "ymin": 468,
+                "xmax": 1130,
+                "ymax": 635,
+                "Label": "truck"
+            },
+            {
+                "xmin": 1326,
+                "ymin": 495,
+                "xmax": 1748,
+                "ymax": 722,
+                "Label": "car"
+            },
+            {
+                "xmin": 38,
+                "ymin": 521,
+                "xmax": 352,
+                "ymax": 659,
+                "Label": "truck"
+            },
+            {
+                "xmin": -3,
+                "ymin": 448,
+                "xmax": 426,
+                "ymax": 988,
+                "Label": "car"
+            },
+            {
+                "xmin": 301,
+                "ymin": 479,
+                "xmax": 710,
+                "ymax": 798,
+                "Label": "car"
+            },
+            {
+                "xmin": 754,
+                "ymin": 440,
+                "xmax": 1335,
+                "ymax": 1096,
+                "Label": "train"
+            },
+            {
+                "xmin": 648,
+                "ymin": 554,
+                "xmax": 767,
+                "ymax": 717,
+                "Label": "car"
+            },
+            {
+                "xmin": 704,
+                "ymin": 402,
+                "xmax": 723,
+                "ymax": 435,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 1310,
+                "ymin": 569,
+                "xmax": 1549,
+                "ymax": 733,
+                "Label": "car"
+            },
+            {
+                "xmin": 1066,
+                "ymin": 572,
+                "xmax": 1109,
+                "ymax": 607,
+                "Label": "car"
+            },
+            {
+                "xmin": 1487,
+                "ymin": 477,
+                "xmax": 1921,
+                "ymax": 871,
+                "Label": "truck"
+            },
+            {
+                "xmin": 1124,
+                "ymin": 569,
+                "xmax": 1266,
+                "ymax": 654,
+                "Label": "car"
+            }
+        ]
+    },
+    {
+        "1479499989074601870.jpg": [
+            {
+                "xmin": 1311,
+                "ymin": 556,
+                "xmax": 1884,
+                "ymax": 822,
+                "Label": "car"
+            },
+            {
+                "xmin": 915,
+                "ymin": 312,
+                "xmax": 943,
+                "ymax": 374,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 568,
+                "ymin": 270,
+                "xmax": 601,
+                "ymax": 337,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 1226,
+                "ymin": 561,
+                "xmax": 1400,
+                "ymax": 650,
+                "Label": "car"
+            },
+            {
+                "xmin": 525,
+                "ymin": 507,
+                "xmax": 1029,
+                "ymax": 888,
+                "Label": "car"
+            },
+            {
+                "xmin": 0,
+                "ymin": 416,
+                "xmax": 232,
+                "ymax": 1007,
+                "Label": "car"
+            },
+            {
+                "xmin": 225,
+                "ymin": 560,
+                "xmax": 341,
+                "ymax": 631,
+                "Label": "car"
+            },
+            {
+                "xmin": 150,
+                "ymin": 551,
+                "xmax": 242,
+                "ymax": 622,
+                "Label": "car"
+            },
+            {
+                "xmin": 1823,
+                "ymin": 569,
+                "xmax": 1925,
+                "ymax": 665,
+                "Label": "car"
+            },
+            {
+                "xmin": 1254,
+                "ymin": 460,
+                "xmax": 1274,
+                "ymax": 490,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 95,
+                "ymin": 1062,
+                "xmax": 1843,
+                "ymax": 1201,
+                "Label": "car"
+            },
+            {
+                "xmin": 1408,
+                "ymin": 462,
+                "xmax": 1427,
+                "ymax": 498,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 857,
+                "ymin": 356,
+                "xmax": 883,
+                "ymax": 407,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 681,
+                "ymin": 356,
+                "xmax": 704,
+                "ymax": 404,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 483,
+                "ymin": 592,
+                "xmax": 573,
+                "ymax": 643,
+                "Label": "car"
+            },
+            {
+                "xmin": 382,
+                "ymin": 609,
+                "xmax": 474,
+                "ymax": 659,
+                "Label": "car"
+            },
+            {
+                "xmin": 559,
+                "ymin": 520,
+                "xmax": 690,
+                "ymax": 641,
+                "Label": "truck"
+            },
+            {
+                "xmin": 714,
+                "ymin": 559,
+                "xmax": 802,
+                "ymax": 631,
+                "Label": "car"
+            },
+            {
+                "xmin": 794,
+                "ymin": 559,
+                "xmax": 859,
+                "ymax": 617,
+                "Label": "car"
+            },
+            {
+                "xmin": 7,
+                "ymin": 607,
+                "xmax": 166,
+                "ymax": 648,
+                "Label": "car"
+            },
+            {
+                "xmin": 964,
+                "ymin": 550,
+                "xmax": 1085,
+                "ymax": 618,
+                "Label": "car"
+            },
+            {
+                "xmin": 1142,
+                "ymin": 441,
+                "xmax": 1166,
+                "ymax": 489,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 510,
+                "ymin": 553,
+                "xmax": 639,
+                "ymax": 643,
+                "Label": "car"
+            },
+            {
+                "xmin": 736,
+                "ymin": 571,
+                "xmax": 787,
+                "ymax": 608,
+                "Label": "car"
+            },
+            {
+                "xmin": 1599,
+                "ymin": 570,
+                "xmax": 1919,
+                "ymax": 760,
+                "Label": "car"
+            },
+            {
+                "xmin": 905,
+                "ymin": 566,
+                "xmax": 968,
+                "ymax": 608,
+                "Label": "car"
+            },
+            {
+                "xmin": 820,
+                "ymin": 573,
+                "xmax": 912,
+                "ymax": 634,
+                "Label": "car"
+            },
+            {
+                "xmin": 986,
+                "ymin": 468,
+                "xmax": 1130,
+                "ymax": 635,
+                "Label": "truck"
+            },
+            {
+                "xmin": 1326,
+                "ymin": 495,
+                "xmax": 1748,
+                "ymax": 722,
+                "Label": "car"
+            },
+            {
+                "xmin": 38,
+                "ymin": 521,
+                "xmax": 352,
+                "ymax": 659,
+                "Label": "truck"
+            },
+            {
+                "xmin": -3,
+                "ymin": 448,
+                "xmax": 426,
+                "ymax": 988,
+                "Label": "car"
+            },
+            {
+                "xmin": 301,
+                "ymin": 479,
+                "xmax": 710,
+                "ymax": 798,
+                "Label": "car"
+            },
+            {
+                "xmin": 754,
+                "ymin": 440,
+                "xmax": 1335,
+                "ymax": 1096,
+                "Label": "train"
+            },
+            {
+                "xmin": 648,
+                "ymin": 554,
+                "xmax": 767,
+                "ymax": 717,
+                "Label": "car"
+            },
+            {
+                "xmin": 704,
+                "ymin": 402,
+                "xmax": 723,
+                "ymax": 435,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 1310,
+                "ymin": 569,
+                "xmax": 1549,
+                "ymax": 733,
+                "Label": "car"
+            },
+            {
+                "xmin": 1066,
+                "ymin": 572,
+                "xmax": 1109,
+                "ymax": 607,
+                "Label": "car"
+            },
+            {
+                "xmin": 1487,
+                "ymin": 477,
+                "xmax": 1921,
+                "ymax": 871,
+                "Label": "truck"
+            },
+            {
+                "xmin": 1124,
+                "ymin": 569,
+                "xmax": 1266,
+                "ymax": 654,
+                "Label": "car"
+            }
+        ]
+    },
+    {
+        "1479504267364539955.jpg": [
+            {
+                "xmin": 1311,
+                "ymin": 556,
+                "xmax": 1884,
+                "ymax": 822,
+                "Label": "car"
+            },
+            {
+                "xmin": 915,
+                "ymin": 312,
+                "xmax": 943,
+                "ymax": 374,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 568,
+                "ymin": 270,
+                "xmax": 601,
+                "ymax": 337,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 1226,
+                "ymin": 561,
+                "xmax": 1400,
+                "ymax": 650,
+                "Label": "car"
+            },
+            {
+                "xmin": 525,
+                "ymin": 507,
+                "xmax": 1029,
+                "ymax": 888,
+                "Label": "car"
+            },
+            {
+                "xmin": 0,
+                "ymin": 416,
+                "xmax": 232,
+                "ymax": 1007,
+                "Label": "car"
+            },
+            {
+                "xmin": 225,
+                "ymin": 560,
+                "xmax": 341,
+                "ymax": 631,
+                "Label": "car"
+            },
+            {
+                "xmin": 150,
+                "ymin": 551,
+                "xmax": 242,
+                "ymax": 622,
+                "Label": "car"
+            },
+            {
+                "xmin": 1823,
+                "ymin": 569,
+                "xmax": 1925,
+                "ymax": 665,
+                "Label": "car"
+            },
+            {
+                "xmin": 1254,
+                "ymin": 460,
+                "xmax": 1274,
+                "ymax": 490,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 95,
+                "ymin": 1062,
+                "xmax": 1843,
+                "ymax": 1201,
+                "Label": "car"
+            },
+            {
+                "xmin": 1408,
+                "ymin": 462,
+                "xmax": 1427,
+                "ymax": 498,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 857,
+                "ymin": 356,
+                "xmax": 883,
+                "ymax": 407,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 681,
+                "ymin": 356,
+                "xmax": 704,
+                "ymax": 404,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 483,
+                "ymin": 592,
+                "xmax": 573,
+                "ymax": 643,
+                "Label": "car"
+            },
+            {
+                "xmin": 382,
+                "ymin": 609,
+                "xmax": 474,
+                "ymax": 659,
+                "Label": "car"
+            },
+            {
+                "xmin": 559,
+                "ymin": 520,
+                "xmax": 690,
+                "ymax": 641,
+                "Label": "truck"
+            },
+            {
+                "xmin": 714,
+                "ymin": 559,
+                "xmax": 802,
+                "ymax": 631,
+                "Label": "car"
+            },
+            {
+                "xmin": 794,
+                "ymin": 559,
+                "xmax": 859,
+                "ymax": 617,
+                "Label": "car"
+            },
+            {
+                "xmin": 7,
+                "ymin": 607,
+                "xmax": 166,
+                "ymax": 648,
+                "Label": "car"
+            },
+            {
+                "xmin": 964,
+                "ymin": 550,
+                "xmax": 1085,
+                "ymax": 618,
+                "Label": "car"
+            },
+            {
+                "xmin": 1142,
+                "ymin": 441,
+                "xmax": 1166,
+                "ymax": 489,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 510,
+                "ymin": 553,
+                "xmax": 639,
+                "ymax": 643,
+                "Label": "car"
+            },
+            {
+                "xmin": 736,
+                "ymin": 571,
+                "xmax": 787,
+                "ymax": 608,
+                "Label": "car"
+            },
+            {
+                "xmin": 1599,
+                "ymin": 570,
+                "xmax": 1919,
+                "ymax": 760,
+                "Label": "car"
+            },
+            {
+                "xmin": 905,
+                "ymin": 566,
+                "xmax": 968,
+                "ymax": 608,
+                "Label": "car"
+            },
+            {
+                "xmin": 820,
+                "ymin": 573,
+                "xmax": 912,
+                "ymax": 634,
+                "Label": "car"
+            },
+            {
+                "xmin": 986,
+                "ymin": 468,
+                "xmax": 1130,
+                "ymax": 635,
+                "Label": "truck"
+            },
+            {
+                "xmin": 1326,
+                "ymin": 495,
+                "xmax": 1748,
+                "ymax": 722,
+                "Label": "car"
+            },
+            {
+                "xmin": 38,
+                "ymin": 521,
+                "xmax": 352,
+                "ymax": 659,
+                "Label": "truck"
+            },
+            {
+                "xmin": -3,
+                "ymin": 448,
+                "xmax": 426,
+                "ymax": 988,
+                "Label": "car"
+            },
+            {
+                "xmin": 301,
+                "ymin": 479,
+                "xmax": 710,
+                "ymax": 798,
+                "Label": "car"
+            },
+            {
+                "xmin": 754,
+                "ymin": 440,
+                "xmax": 1335,
+                "ymax": 1096,
+                "Label": "train"
+            },
+            {
+                "xmin": 648,
+                "ymin": 554,
+                "xmax": 767,
+                "ymax": 717,
+                "Label": "car"
+            },
+            {
+                "xmin": 704,
+                "ymin": 402,
+                "xmax": 723,
+                "ymax": 435,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 1310,
+                "ymin": 569,
+                "xmax": 1549,
+                "ymax": 733,
+                "Label": "car"
+            },
+            {
+                "xmin": 1066,
+                "ymin": 572,
+                "xmax": 1109,
+                "ymax": 607,
+                "Label": "car"
+            },
+            {
+                "xmin": 1487,
+                "ymin": 477,
+                "xmax": 1921,
+                "ymax": 871,
+                "Label": "truck"
+            },
+            {
+                "xmin": 1124,
+                "ymin": 569,
+                "xmax": 1266,
+                "ymax": 654,
+                "Label": "car"
+            }
+        ]
+    },
+    {
+        "1479505115920394605.jpg": [
+            {
+                "xmin": 1311,
+                "ymin": 556,
+                "xmax": 1884,
+                "ymax": 822,
+                "Label": "car"
+            },
+            {
+                "xmin": 915,
+                "ymin": 312,
+                "xmax": 943,
+                "ymax": 374,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 568,
+                "ymin": 270,
+                "xmax": 601,
+                "ymax": 337,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 1226,
+                "ymin": 561,
+                "xmax": 1400,
+                "ymax": 650,
+                "Label": "car"
+            },
+            {
+                "xmin": 525,
+                "ymin": 507,
+                "xmax": 1029,
+                "ymax": 888,
+                "Label": "car"
+            },
+            {
+                "xmin": 0,
+                "ymin": 416,
+                "xmax": 232,
+                "ymax": 1007,
+                "Label": "car"
+            },
+            {
+                "xmin": 225,
+                "ymin": 560,
+                "xmax": 341,
+                "ymax": 631,
+                "Label": "car"
+            },
+            {
+                "xmin": 150,
+                "ymin": 551,
+                "xmax": 242,
+                "ymax": 622,
+                "Label": "car"
+            },
+            {
+                "xmin": 1823,
+                "ymin": 569,
+                "xmax": 1925,
+                "ymax": 665,
+                "Label": "car"
+            },
+            {
+                "xmin": 1254,
+                "ymin": 460,
+                "xmax": 1274,
+                "ymax": 490,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 95,
+                "ymin": 1062,
+                "xmax": 1843,
+                "ymax": 1201,
+                "Label": "car"
+            },
+            {
+                "xmin": 1408,
+                "ymin": 462,
+                "xmax": 1427,
+                "ymax": 498,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 857,
+                "ymin": 356,
+                "xmax": 883,
+                "ymax": 407,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 681,
+                "ymin": 356,
+                "xmax": 704,
+                "ymax": 404,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 483,
+                "ymin": 592,
+                "xmax": 573,
+                "ymax": 643,
+                "Label": "car"
+            },
+            {
+                "xmin": 382,
+                "ymin": 609,
+                "xmax": 474,
+                "ymax": 659,
+                "Label": "car"
+            },
+            {
+                "xmin": 559,
+                "ymin": 520,
+                "xmax": 690,
+                "ymax": 641,
+                "Label": "truck"
+            },
+            {
+                "xmin": 714,
+                "ymin": 559,
+                "xmax": 802,
+                "ymax": 631,
+                "Label": "car"
+            },
+            {
+                "xmin": 794,
+                "ymin": 559,
+                "xmax": 859,
+                "ymax": 617,
+                "Label": "car"
+            },
+            {
+                "xmin": 7,
+                "ymin": 607,
+                "xmax": 166,
+                "ymax": 648,
+                "Label": "car"
+            },
+            {
+                "xmin": 964,
+                "ymin": 550,
+                "xmax": 1085,
+                "ymax": 618,
+                "Label": "car"
+            },
+            {
+                "xmin": 1142,
+                "ymin": 441,
+                "xmax": 1166,
+                "ymax": 489,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 510,
+                "ymin": 553,
+                "xmax": 639,
+                "ymax": 643,
+                "Label": "car"
+            },
+            {
+                "xmin": 736,
+                "ymin": 571,
+                "xmax": 787,
+                "ymax": 608,
+                "Label": "car"
+            },
+            {
+                "xmin": 1599,
+                "ymin": 570,
+                "xmax": 1919,
+                "ymax": 760,
+                "Label": "car"
+            },
+            {
+                "xmin": 905,
+                "ymin": 566,
+                "xmax": 968,
+                "ymax": 608,
+                "Label": "car"
+            },
+            {
+                "xmin": 820,
+                "ymin": 573,
+                "xmax": 912,
+                "ymax": 634,
+                "Label": "car"
+            },
+            {
+                "xmin": 986,
+                "ymin": 468,
+                "xmax": 1130,
+                "ymax": 635,
+                "Label": "truck"
+            },
+            {
+                "xmin": 1326,
+                "ymin": 495,
+                "xmax": 1748,
+                "ymax": 722,
+                "Label": "car"
+            },
+            {
+                "xmin": 38,
+                "ymin": 521,
+                "xmax": 352,
+                "ymax": 659,
+                "Label": "truck"
+            },
+            {
+                "xmin": -3,
+                "ymin": 448,
+                "xmax": 426,
+                "ymax": 988,
+                "Label": "car"
+            },
+            {
+                "xmin": 301,
+                "ymin": 479,
+                "xmax": 710,
+                "ymax": 798,
+                "Label": "car"
+            },
+            {
+                "xmin": 754,
+                "ymin": 440,
+                "xmax": 1335,
+                "ymax": 1096,
+                "Label": "train"
+            },
+            {
+                "xmin": 648,
+                "ymin": 554,
+                "xmax": 767,
+                "ymax": 717,
+                "Label": "car"
+            },
+            {
+                "xmin": 704,
+                "ymin": 402,
+                "xmax": 723,
+                "ymax": 435,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 1310,
+                "ymin": 569,
+                "xmax": 1549,
+                "ymax": 733,
+                "Label": "car"
+            },
+            {
+                "xmin": 1066,
+                "ymin": 572,
+                "xmax": 1109,
+                "ymax": 607,
+                "Label": "car"
+            },
+            {
+                "xmin": 1487,
+                "ymin": 477,
+                "xmax": 1921,
+                "ymax": 871,
+                "Label": "truck"
+            },
+            {
+                "xmin": 1124,
+                "ymin": 569,
+                "xmax": 1266,
+                "ymax": 654,
+                "Label": "car"
+            }
+        ]
+    },
+    {
+        "1479503133787255198.jpg": [
+            {
+                "xmin": 1311,
+                "ymin": 556,
+                "xmax": 1884,
+                "ymax": 822,
+                "Label": "car"
+            },
+            {
+                "xmin": 915,
+                "ymin": 312,
+                "xmax": 943,
+                "ymax": 374,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 568,
+                "ymin": 270,
+                "xmax": 601,
+                "ymax": 337,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 1226,
+                "ymin": 561,
+                "xmax": 1400,
+                "ymax": 650,
+                "Label": "car"
+            },
+            {
+                "xmin": 525,
+                "ymin": 507,
+                "xmax": 1029,
+                "ymax": 888,
+                "Label": "car"
+            },
+            {
+                "xmin": 0,
+                "ymin": 416,
+                "xmax": 232,
+                "ymax": 1007,
+                "Label": "car"
+            },
+            {
+                "xmin": 225,
+                "ymin": 560,
+                "xmax": 341,
+                "ymax": 631,
+                "Label": "car"
+            },
+            {
+                "xmin": 150,
+                "ymin": 551,
+                "xmax": 242,
+                "ymax": 622,
+                "Label": "car"
+            },
+            {
+                "xmin": 1823,
+                "ymin": 569,
+                "xmax": 1925,
+                "ymax": 665,
+                "Label": "car"
+            },
+            {
+                "xmin": 1254,
+                "ymin": 460,
+                "xmax": 1274,
+                "ymax": 490,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 95,
+                "ymin": 1062,
+                "xmax": 1843,
+                "ymax": 1201,
+                "Label": "car"
+            },
+            {
+                "xmin": 1408,
+                "ymin": 462,
+                "xmax": 1427,
+                "ymax": 498,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 857,
+                "ymin": 356,
+                "xmax": 883,
+                "ymax": 407,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 681,
+                "ymin": 356,
+                "xmax": 704,
+                "ymax": 404,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 483,
+                "ymin": 592,
+                "xmax": 573,
+                "ymax": 643,
+                "Label": "car"
+            },
+            {
+                "xmin": 382,
+                "ymin": 609,
+                "xmax": 474,
+                "ymax": 659,
+                "Label": "car"
+            },
+            {
+                "xmin": 559,
+                "ymin": 520,
+                "xmax": 690,
+                "ymax": 641,
+                "Label": "truck"
+            },
+            {
+                "xmin": 714,
+                "ymin": 559,
+                "xmax": 802,
+                "ymax": 631,
+                "Label": "car"
+            },
+            {
+                "xmin": 794,
+                "ymin": 559,
+                "xmax": 859,
+                "ymax": 617,
+                "Label": "car"
+            },
+            {
+                "xmin": 7,
+                "ymin": 607,
+                "xmax": 166,
+                "ymax": 648,
+                "Label": "car"
+            },
+            {
+                "xmin": 964,
+                "ymin": 550,
+                "xmax": 1085,
+                "ymax": 618,
+                "Label": "car"
+            },
+            {
+                "xmin": 1142,
+                "ymin": 441,
+                "xmax": 1166,
+                "ymax": 489,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 510,
+                "ymin": 553,
+                "xmax": 639,
+                "ymax": 643,
+                "Label": "car"
+            },
+            {
+                "xmin": 736,
+                "ymin": 571,
+                "xmax": 787,
+                "ymax": 608,
+                "Label": "car"
+            },
+            {
+                "xmin": 1599,
+                "ymin": 570,
+                "xmax": 1919,
+                "ymax": 760,
+                "Label": "car"
+            },
+            {
+                "xmin": 905,
+                "ymin": 566,
+                "xmax": 968,
+                "ymax": 608,
+                "Label": "car"
+            },
+            {
+                "xmin": 820,
+                "ymin": 573,
+                "xmax": 912,
+                "ymax": 634,
+                "Label": "car"
+            },
+            {
+                "xmin": 986,
+                "ymin": 468,
+                "xmax": 1130,
+                "ymax": 635,
+                "Label": "truck"
+            },
+            {
+                "xmin": 1326,
+                "ymin": 495,
+                "xmax": 1748,
+                "ymax": 722,
+                "Label": "car"
+            },
+            {
+                "xmin": 38,
+                "ymin": 521,
+                "xmax": 352,
+                "ymax": 659,
+                "Label": "truck"
+            },
+            {
+                "xmin": -3,
+                "ymin": 448,
+                "xmax": 426,
+                "ymax": 988,
+                "Label": "car"
+            },
+            {
+                "xmin": 301,
+                "ymin": 479,
+                "xmax": 710,
+                "ymax": 798,
+                "Label": "car"
+            },
+            {
+                "xmin": 754,
+                "ymin": 440,
+                "xmax": 1335,
+                "ymax": 1096,
+                "Label": "train"
+            },
+            {
+                "xmin": 648,
+                "ymin": 554,
+                "xmax": 767,
+                "ymax": 717,
+                "Label": "car"
+            },
+            {
+                "xmin": 704,
+                "ymin": 402,
+                "xmax": 723,
+                "ymax": 435,
+                "Label": "traffic light"
+            },
+            {
+                "xmin": 1310,
+                "ymin": 569,
+                "xmax": 1549,
+                "ymax": 733,
+                "Label": "car"
+            },
+            {
+                "xmin": 1066,
+                "ymin": 572,
+                "xmax": 1109,
+                "ymax": 607,
+                "Label": "car"
+            },
+            {
+                "xmin": 1487,
+                "ymin": 477,
+                "xmax": 1921,
+                "ymax": 871,
+                "Label": "truck"
+            },
+            {
+                "xmin": 1124,
+                "ymin": 569,
+                "xmax": 1266,
+                "ymax": 654,
+                "Label": "car"
+            }
+        ]
+    }
+]
