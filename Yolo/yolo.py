@@ -148,7 +148,7 @@ def yolo(args):
                                   "Label": predicted_label[0]}
                     boxdictionary.append(singledict)
                     if type(args["output"]) is str:
-                    	cv2.imwrite(args["output"]+'/'+onlyfiles[picture], image)
+                    	cv2.imwrite(args["output"]+'/objects'+'/'+onlyfiles[picture], image)
             filedictionary = {onlyfiles[picture]: boxdictionary}
             dictionary.append(filedictionary)
 

@@ -19,4 +19,4 @@ args = vars(ap.parse_args())
 
 yolo.yolo(args)
 lane_inference.test_lanenet_batch(src_dir=args["input"], weights_path=args["lanenet_weights"], save_json=True,
-                           save_dir=args["output"])
+                           save_dir=args["output"]+'/lanes')

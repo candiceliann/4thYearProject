@@ -114,7 +114,7 @@ def test_lanenet_batch(src_dir, weights_path, save_dir, save_json=True):
             output_image_dir = save_dir
             os.makedirs(output_image_dir, exist_ok=True)
             output_image_path = ops.join(output_image_dir, input_image_name)
-            if ops.exists(output_image_path):
+            if ops.exists(output_image_dir):
                 cv2.imwrite(output_image_path, postprocess_result['source_image'])
 
     return lane_list
