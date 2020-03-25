@@ -7,7 +7,7 @@ import numpy as np
 from sklearn.cluster import DBSCAN
 from sklearn.preprocessing import StandardScaler
 
-from LaneNet.config import global_config
+from config import global_config
 import json
 import os
 
@@ -31,7 +31,6 @@ def _morphological_process(image, kernel_size=5):
 
     # close operation fille hole
     closing = cv2.morphologyEx(image, cv2.MORPH_CLOSE, kernel, iterations=1)
-
     return closing
 
 
@@ -156,7 +155,7 @@ class _LaneNetCluster(object):
         :param embedding_image_feats:
         :return:
         """
-        db = DBSCAN(eps=CFG.POSTPROCESS.DBSCAN_EPS, min_samples=CFG.POSTPROCESS.DBSCAN_MIN_SAMPLES)
+        db = DBSCAN(eps=0.6, min_samples=600)
         try:
             features = StandardScaler().fit_transform(embedding_image_feats)
             db.fit(features)
@@ -183,7 +182,6 @@ class _LaneNetCluster(object):
             'unique_labels': unique_labels,
             'cluster_center': cluster_centers
         }
-
         return ret
 
     @staticmethod
@@ -221,7 +219,6 @@ class _LaneNetCluster(object):
             binary_seg_ret=binary_seg_result,
             instance_seg_ret=instance_seg_result
         )
-
         # dbscan cluster
         dbscan_cluster_result = self._embedding_feats_dbscan_cluster(
             embedding_image_feats=get_lane_embedding_feats_result['lane_embedding_feats']
@@ -252,7 +249,7 @@ class LaneNetPostProcessor(object):
     """
     lanenet post process for lane generation
     """
-    def __init__(self, ipm_remap_file_path='LaneNet/data/tusimple_ipm_remap.yml'):
+    def __init__(self, ipm_remap_file_path='./data/tusimple_ipm_remap.yml'):
         """
 
         :param ipm_remap_file_path: ipm generate file path
@@ -296,7 +293,7 @@ class LaneNetPostProcessor(object):
 
     def postprocess(self, binary_seg_result, instance_seg_result=None,
                     min_area_threshold=100, source_image=None,
-                    data_source='tusimple', raw_file='None',
+                    data_source='tusimple', raw_file='None', 
                     save_json=False):
         """
 
@@ -360,7 +357,7 @@ class LaneNetPostProcessor(object):
             fit_params.append(fit_param)
 
             [ipm_image_height, ipm_image_width] = tmp_ipm_mask.shape
-            plot_y = np.linspace(10, ipm_image_height, ipm_image_height - 10)
+            plot_y = np.linspace(ipm_image_height*(nonzero_y[0]/ipm_image_height), ipm_image_height, (ipm_image_height - 10))
             fit_x = fit_param[0] * plot_y ** 2 + fit_param[1] * plot_y + fit_param[2]
             # fit_x = fit_param[0] * plot_y ** 3 + fit_param[1] * plot_y ** 2 + fit_param[2] * plot_y + fit_param[3]
 
@@ -375,8 +372,9 @@ class LaneNetPostProcessor(object):
                 src_y = src_y if src_y > 0 else 0
 
                 lane_pts.append([src_x, src_y])
-
-            src_lane_pts.append(lane_pts)
+                
+            if lane_pts:
+                src_lane_pts.append(lane_pts)
 
         # tusimple test data sample point along y axis every 10 pixels
         source_image_width = source_image.shape[1]
@@ -386,7 +384,7 @@ class LaneNetPostProcessor(object):
             single_lane_pt_x = np.array(single_lane_pts, dtype=np.float32)[:, 0]
             single_lane_pt_y = np.array(single_lane_pts, dtype=np.float32)[:, 1]
             if data_source == 'tusimple':
-                start_plot_y = 240
+                start_plot_y = 240#*1.6
                 end_plot_y = 720
             elif data_source == 'beec_ccd':
                 start_plot_y = 820
@@ -432,7 +430,7 @@ class LaneNetPostProcessor(object):
                 #print('y:')
                 #print(int(interpolation_src_pt_y))
                 y_point.append(int(interpolation_src_pt_y))
-
+                
                 cv2.circle(source_image, (int(interpolation_src_pt_x),
                                           int(interpolation_src_pt_y)), 5, lane_color, -1)
             lanes.append(lane)
@@ -445,7 +443,7 @@ class LaneNetPostProcessor(object):
             }
         if save_json == True:
             if os.path.isfile('inf_data.json'):
-                with open('inf_data.json', 'a+') as json_file:
+                with open('inf_data.json', 'a+') as json_file: 
                     json.dump(lanes_dict, json_file)
                     json_file.write('\n')
             else:
@@ -456,11 +454,9 @@ class LaneNetPostProcessor(object):
 
         ret = {
             'lane_data' : lanes_dict,
-            #'mask_image': mask_image,
-            #'fit_params': fit_params,
+            'mask_image': mask_image,
+            'fit_params': fit_params,
             'source_image': source_image
-
-
         }
 
         return ret
