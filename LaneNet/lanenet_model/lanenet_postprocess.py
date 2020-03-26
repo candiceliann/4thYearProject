@@ -387,7 +387,7 @@ class LaneNetPostProcessor(object):
             single_lane_pt_x = np.array(single_lane_pts, dtype=np.float32)[:, 0]
             single_lane_pt_y = np.array(single_lane_pts, dtype=np.float32)[:, 1]
             if data_source == 'tusimple':
-                start_plot_y = 240
+                start_plot_y = 240#*1.6
                 end_plot_y = 720
             elif data_source == 'beec_ccd':
                 start_plot_y = 820
@@ -445,12 +445,12 @@ class LaneNetPostProcessor(object):
                 }
             }
         if save_json == True:
-            if os.path.isfile('inf_data.json'):
-                with open('inf_data.json', 'a+') as json_file:
+            if os.path.isfile('Images/JSON/inf_data.json'):
+                with open('Images/JSON/inf_data.json', 'a+') as json_file:
                     json.dump(lanes_dict, json_file)
                     json_file.write('\n')
             else:
-                with open('inf_data.json', 'w+') as json_file:
+                with open('Images/JSON/inf_data.json', 'w+') as json_file:
                     json.dump(lanes_dict, json_file)
                     json_file.write('\n')
 
@@ -460,8 +460,6 @@ class LaneNetPostProcessor(object):
             'mask_image': mask_image,
             'fit_params': fit_params,
             'source_image': source_image
-
-
         }
 
         return ret
