@@ -1,0 +1,539 @@
+[
+    {
+        "maxresdefault.jpg": [
+            {
+                "xmin": 0,
+                "ymin": 53,
+                "xmax": 553,
+                "ymax": 524,
+                "Label": "truck"
+            },
+            {
+                "xmin": 827,
+                "ymin": 307,
+                "xmax": 1175,
+                "ymax": 471,
+                "Label": "car"
+            },
+            {
+                "xmin": 631,
+                "ymin": 311,
+                "xmax": 669,
+                "ymax": 329,
+                "Label": "car"
+            },
+            {
+                "xmin": 810,
+                "ymin": 341,
+                "xmax": 1013,
+                "ymax": 478,
+                "Label": "car"
+            },
+            {
+                "xmin": 1221,
+                "ymin": 344,
+                "xmax": 1276,
+                "ymax": 503,
+                "Label": "car"
+            },
+            {
+                "xmin": 680,
+                "ymin": 336,
+                "xmax": 752,
+                "ymax": 389,
+                "Label": "car"
+            },
+            {
+                "xmin": 234,
+                "ymin": 343,
+                "xmax": 283,
+                "ymax": 378,
+                "Label": "car"
+            },
+            {
+                "xmin": 515,
+                "ymin": 342,
+                "xmax": 669,
+                "ymax": 445,
+                "Label": "car"
+            },
+            {
+                "xmin": 642,
+                "ymin": 335,
+                "xmax": 670,
+                "ymax": 364,
+                "Label": "car"
+            },
+            {
+                "xmin": 936,
+                "ymin": 325,
+                "xmax": 1048,
+                "ymax": 420,
+                "Label": "car"
+            },
+            {
+                "xmin": 294,
+                "ymin": 334,
+                "xmax": 358,
+                "ymax": 378,
+                "Label": "car"
+            },
+            {
+                "xmin": 489,
+                "ymin": 335,
+                "xmax": 516,
+                "ymax": 350,
+                "Label": "car"
+            },
+            {
+                "xmin": 421,
+                "ymin": 343,
+                "xmax": 448,
+                "ymax": 361,
+                "Label": "car"
+            },
+            {
+                "xmin": 784,
+                "ymin": 341,
+                "xmax": 824,
+                "ymax": 368,
+                "Label": "car"
+            },
+            {
+                "xmin": 377,
+                "ymin": 341,
+                "xmax": 417,
+                "ymax": 371,
+                "Label": "car"
+            },
+            {
+                "xmin": 178,
+                "ymin": 238,
+                "xmax": 375,
+                "ymax": 372,
+                "Label": "car"
+            },
+            {
+                "xmin": 637,
+                "ymin": 245,
+                "xmax": 694,
+                "ymax": 284,
+                "Label": "car"
+            },
+            {
+                "xmin": 0,
+                "ymin": 253,
+                "xmax": 133,
+                "ymax": 559,
+                "Label": "car"
+            },
+            {
+                "xmin": 523,
+                "ymin": 240,
+                "xmax": 568,
+                "ymax": 280,
+                "Label": "car"
+            },
+            {
+                "xmin": 389,
+                "ymin": 225,
+                "xmax": 476,
+                "ymax": 306,
+                "Label": "car"
+            },
+            {
+                "xmin": 512,
+                "ymin": 237,
+                "xmax": 534,
+                "ymax": 251,
+                "Label": "car"
+            },
+            {
+                "xmin": 556,
+                "ymin": 231,
+                "xmax": 588,
+                "ymax": 261,
+                "Label": "car"
+            },
+            {
+                "xmin": 491,
+                "ymin": 237,
+                "xmax": 517,
+                "ymax": 262,
+                "Label": "car"
+            },
+            {
+                "xmin": 470,
+                "ymin": 236,
+                "xmax": 492,
+                "ymax": 256,
+                "Label": "car"
+            },
+            {
+                "xmin": 371,
+                "ymin": 234,
+                "xmax": 392,
+                "ymax": 252,
+                "Label": "car"
+            }
+        ]
+    },
+    {
+        "oop.jpg": [
+            {
+                "xmin": 0,
+                "ymin": 53,
+                "xmax": 553,
+                "ymax": 524,
+                "Label": "truck"
+            },
+            {
+                "xmin": 827,
+                "ymin": 307,
+                "xmax": 1175,
+                "ymax": 471,
+                "Label": "car"
+            },
+            {
+                "xmin": 631,
+                "ymin": 311,
+                "xmax": 669,
+                "ymax": 329,
+                "Label": "car"
+            },
+            {
+                "xmin": 810,
+                "ymin": 341,
+                "xmax": 1013,
+                "ymax": 478,
+                "Label": "car"
+            },
+            {
+                "xmin": 1221,
+                "ymin": 344,
+                "xmax": 1276,
+                "ymax": 503,
+                "Label": "car"
+            },
+            {
+                "xmin": 680,
+                "ymin": 336,
+                "xmax": 752,
+                "ymax": 389,
+                "Label": "car"
+            },
+            {
+                "xmin": 234,
+                "ymin": 343,
+                "xmax": 283,
+                "ymax": 378,
+                "Label": "car"
+            },
+            {
+                "xmin": 515,
+                "ymin": 342,
+                "xmax": 669,
+                "ymax": 445,
+                "Label": "car"
+            },
+            {
+                "xmin": 642,
+                "ymin": 335,
+                "xmax": 670,
+                "ymax": 364,
+                "Label": "car"
+            },
+            {
+                "xmin": 936,
+                "ymin": 325,
+                "xmax": 1048,
+                "ymax": 420,
+                "Label": "car"
+            },
+            {
+                "xmin": 294,
+                "ymin": 334,
+                "xmax": 358,
+                "ymax": 378,
+                "Label": "car"
+            },
+            {
+                "xmin": 489,
+                "ymin": 335,
+                "xmax": 516,
+                "ymax": 350,
+                "Label": "car"
+            },
+            {
+                "xmin": 421,
+                "ymin": 343,
+                "xmax": 448,
+                "ymax": 361,
+                "Label": "car"
+            },
+            {
+                "xmin": 784,
+                "ymin": 341,
+                "xmax": 824,
+                "ymax": 368,
+                "Label": "car"
+            },
+            {
+                "xmin": 377,
+                "ymin": 341,
+                "xmax": 417,
+                "ymax": 371,
+                "Label": "car"
+            },
+            {
+                "xmin": 178,
+                "ymin": 238,
+                "xmax": 375,
+                "ymax": 372,
+                "Label": "car"
+            },
+            {
+                "xmin": 637,
+                "ymin": 245,
+                "xmax": 694,
+                "ymax": 284,
+                "Label": "car"
+            },
+            {
+                "xmin": 0,
+                "ymin": 253,
+                "xmax": 133,
+                "ymax": 559,
+                "Label": "car"
+            },
+            {
+                "xmin": 523,
+                "ymin": 240,
+                "xmax": 568,
+                "ymax": 280,
+                "Label": "car"
+            },
+            {
+                "xmin": 389,
+                "ymin": 225,
+                "xmax": 476,
+                "ymax": 306,
+                "Label": "car"
+            },
+            {
+                "xmin": 512,
+                "ymin": 237,
+                "xmax": 534,
+                "ymax": 251,
+                "Label": "car"
+            },
+            {
+                "xmin": 556,
+                "ymin": 231,
+                "xmax": 588,
+                "ymax": 261,
+                "Label": "car"
+            },
+            {
+                "xmin": 491,
+                "ymin": 237,
+                "xmax": 517,
+                "ymax": 262,
+                "Label": "car"
+            },
+            {
+                "xmin": 470,
+                "ymin": 236,
+                "xmax": 492,
+                "ymax": 256,
+                "Label": "car"
+            },
+            {
+                "xmin": 371,
+                "ymin": 234,
+                "xmax": 392,
+                "ymax": 252,
+                "Label": "car"
+            }
+        ]
+    },
+    {
+        "3.jpg": [
+            {
+                "xmin": 0,
+                "ymin": 53,
+                "xmax": 553,
+                "ymax": 524,
+                "Label": "truck"
+            },
+            {
+                "xmin": 827,
+                "ymin": 307,
+                "xmax": 1175,
+                "ymax": 471,
+                "Label": "car"
+            },
+            {
+                "xmin": 631,
+                "ymin": 311,
+                "xmax": 669,
+                "ymax": 329,
+                "Label": "car"
+            },
+            {
+                "xmin": 810,
+                "ymin": 341,
+                "xmax": 1013,
+                "ymax": 478,
+                "Label": "car"
+            },
+            {
+                "xmin": 1221,
+                "ymin": 344,
+                "xmax": 1276,
+                "ymax": 503,
+                "Label": "car"
+            },
+            {
+                "xmin": 680,
+                "ymin": 336,
+                "xmax": 752,
+                "ymax": 389,
+                "Label": "car"
+            },
+            {
+                "xmin": 234,
+                "ymin": 343,
+                "xmax": 283,
+                "ymax": 378,
+                "Label": "car"
+            },
+            {
+                "xmin": 515,
+                "ymin": 342,
+                "xmax": 669,
+                "ymax": 445,
+                "Label": "car"
+            },
+            {
+                "xmin": 642,
+                "ymin": 335,
+                "xmax": 670,
+                "ymax": 364,
+                "Label": "car"
+            },
+            {
+                "xmin": 936,
+                "ymin": 325,
+                "xmax": 1048,
+                "ymax": 420,
+                "Label": "car"
+            },
+            {
+                "xmin": 294,
+                "ymin": 334,
+                "xmax": 358,
+                "ymax": 378,
+                "Label": "car"
+            },
+            {
+                "xmin": 489,
+                "ymin": 335,
+                "xmax": 516,
+                "ymax": 350,
+                "Label": "car"
+            },
+            {
+                "xmin": 421,
+                "ymin": 343,
+                "xmax": 448,
+                "ymax": 361,
+                "Label": "car"
+            },
+            {
+                "xmin": 784,
+                "ymin": 341,
+                "xmax": 824,
+                "ymax": 368,
+                "Label": "car"
+            },
+            {
+                "xmin": 377,
+                "ymin": 341,
+                "xmax": 417,
+                "ymax": 371,
+                "Label": "car"
+            },
+            {
+                "xmin": 178,
+                "ymin": 238,
+                "xmax": 375,
+                "ymax": 372,
+                "Label": "car"
+            },
+            {
+                "xmin": 637,
+                "ymin": 245,
+                "xmax": 694,
+                "ymax": 284,
+                "Label": "car"
+            },
+            {
+                "xmin": 0,
+                "ymin": 253,
+                "xmax": 133,
+                "ymax": 559,
+                "Label": "car"
+            },
+            {
+                "xmin": 523,
+                "ymin": 240,
+                "xmax": 568,
+                "ymax": 280,
+                "Label": "car"
+            },
+            {
+                "xmin": 389,
+                "ymin": 225,
+                "xmax": 476,
+                "ymax": 306,
+                "Label": "car"
+            },
+            {
+                "xmin": 512,
+                "ymin": 237,
+                "xmax": 534,
+                "ymax": 251,
+                "Label": "car"
+            },
+            {
+                "xmin": 556,
+                "ymin": 231,
+                "xmax": 588,
+                "ymax": 261,
+                "Label": "car"
+            },
+            {
+                "xmin": 491,
+                "ymin": 237,
+                "xmax": 517,
+                "ymax": 262,
+                "Label": "car"
+            },
+            {
+                "xmin": 470,
+                "ymin": 236,
+                "xmax": 492,
+                "ymax": 256,
+                "Label": "car"
+            },
+            {
+                "xmin": 371,
+                "ymin": 234,
+                "xmax": 392,
+                "ymax": 252,
+                "Label": "car"
+            }
+        ]
+    }
+]

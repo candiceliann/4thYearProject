@@ -67,8 +67,8 @@ __C.TEST.BATCH_SIZE = 2
 __C.POSTPROCESS = edict()
 
 # Set the post process connect components analysis min area threshold
-__C.POSTPROCESS.MIN_AREA_THRESHOLD = 100
+__C.POSTPROCESS.MIN_AREA_THRESHOLD = 200
 # Set the post process dbscan search radius threshold
-__C.POSTPROCESS.DBSCAN_EPS = 0.35
+__C.POSTPROCESS.DBSCAN_EPS = 0.5
 # Set the post process dbscan min samples threshold
-__C.POSTPROCESS.DBSCAN_MIN_SAMPLES = 1000
+__C.POSTPROCESS.DBSCAN_MIN_SAMPLES = 600

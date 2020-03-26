@@ -95,12 +95,12 @@ def test_lanenet_batch(src_dir, weights_path, save_dir, save_json=True):
             )
             lane_list.append(postprocess_result['lane_data'])
             if save_json == True:
-                if os.path.isfile('inf_data.json'):
-                    with open('inf_data.json', 'a+') as json_file:
+                if os.path.isfile('Images/JSON/inf_data.json'):
+                    with open('Images/JSON/inf_data.json', 'a+') as json_file:
                         json.dump(postprocess_result['lane_data'], json_file)
                         json_file.write('\n')
                 else:
-                    with open('inf_data.json', 'w+') as json_file:
+                    with open('Images/JSON/inf_data.json', 'w+') as json_file:
                         json.dump(postprocess_result['lane_data'], json_file)
                         json_file.write('\n')
             image_name = image_path.split('/')[-1]
@@ -116,6 +116,8 @@ def test_lanenet_batch(src_dir, weights_path, save_dir, save_json=True):
             output_image_path = ops.join(output_image_dir, input_image_name)
             if ops.exists(output_image_dir):
                 cv2.imwrite(output_image_path, postprocess_result['source_image'])
+                #cv2.imwrite(output_image_path, postprocess_result['mask_image'])
+                #cv2.imwrite(output_image_path, binary_seg_image[0] * 255)
 
     return lane_list
 

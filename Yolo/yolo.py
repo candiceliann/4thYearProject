@@ -152,7 +152,7 @@ def yolo(args):
             filedictionary = {onlyfiles[picture]: boxdictionary}
             dictionary.append(filedictionary)
 
-    with open('data.json', 'w') as fp:
+    with open('Images/JSON/data.json', 'w') as fp:
         json.dump(dictionary, fp, indent=4)
 
     return None

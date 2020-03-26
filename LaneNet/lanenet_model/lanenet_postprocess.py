@@ -360,7 +360,7 @@ class LaneNetPostProcessor(object):
             fit_params.append(fit_param)
 
             [ipm_image_height, ipm_image_width] = tmp_ipm_mask.shape
-            plot_y = np.linspace(10, ipm_image_height, ipm_image_height - 10)
+            plot_y = np.linspace(ipm_image_height*(nonzero_y[0]/ipm_image_height), ipm_image_height, ipm_image_height - 10)
             fit_x = fit_param[0] * plot_y ** 2 + fit_param[1] * plot_y + fit_param[2]
             # fit_x = fit_param[0] * plot_y ** 3 + fit_param[1] * plot_y ** 2 + fit_param[2] * plot_y + fit_param[3]
 
@@ -376,7 +376,8 @@ class LaneNetPostProcessor(object):
 
                 lane_pts.append([src_x, src_y])
 
-            src_lane_pts.append(lane_pts)
+            if lane_pts:
+                src_lane_pts.append(lane_pts)
 
         # tusimple test data sample point along y axis every 10 pixels
         source_image_width = source_image.shape[1]
@@ -456,8 +457,8 @@ class LaneNetPostProcessor(object):
 
         ret = {
             'lane_data' : lanes_dict,
-            #'mask_image': mask_image,
-            #'fit_params': fit_params,
+            'mask_image': mask_image,
+            'fit_params': fit_params,
             'source_image': source_image
 
 
