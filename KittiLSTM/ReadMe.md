@@ -2,4 +2,4 @@
 
 Loss over training
 
-![Loss over training](KittiLSTM/lstm4_loss_training.png)
+![Loss over training](lstm4_loss_training.png)
