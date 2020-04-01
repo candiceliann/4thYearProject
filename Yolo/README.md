@@ -11,4 +11,4 @@ Note: I dont think this one has been updated with the weights folder name change
 
 CrowdAI Dataset - 59%
 
-
+Autti Dataset - 52%
