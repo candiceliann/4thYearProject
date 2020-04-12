@@ -1,18 +1,15 @@
-# USAGE
-# python yolo.py --input images/object-detection-crowdai --output output_images --yolo yolo-coco
-
 # import the necessary packages
 import numpy as np
 import argparse
 import time
 import cv2
-import os
+import os, glob
 from os import listdir
 from os.path import isfile, join
 import pandas as pd
 from collections import namedtuple
 import json
-
+import re
 
 def args():
     # construct the argument parse and parse the arguments
@@ -31,6 +28,12 @@ def args():
 
     return args
 
+numbers = re.compile(r'(\d+)')
+
+def numericalSort(value):
+    parts = numbers.split(value)
+    parts[1::2] = map(int, parts[1::2])
+    return parts
 
 def yolo(args):
     # load the COCO class labels our YOLO model was trained on
@@ -51,16 +54,12 @@ def yolo(args):
     net = cv2.dnn.readNetFromDarknet(configPath, weightsPath)
 
     # load our input image and grab its spatial dimensions
-    dictPath = os.path.sep.join([args["yolo_weights"], "data.json"])
-    onlyfiles = [f for f in listdir(
-        args["input"]) if isfile(join(args["input"], f))]
-    total = 0
-    boxdictionary = []
-    dictionary = []
+    onlyfiles = [f for f in listdir(args["input"]) if isfile(join(args["input"], f))]
+    jsonlabel = {}
 
-    for picture in range(len(onlyfiles)):  # range(len(onlyfiles))
-        if '.jpg' in onlyfiles[picture]:
-            image = cv2.imread(args["input"]+'/'+onlyfiles[picture])
+    for picture in sorted(onlyfiles, key=numericalSort):  # range(len(onlyfiles))
+        if '.jpg' in picture or '.png' in picture:
+            image = cv2.imread(args["input"]+'/'+picture)
             (H, W) = image.shape[:2]
 
             # determine only the *output* layer names that we need from YOLO
@@ -79,7 +78,7 @@ def yolo(args):
 
             # show timing information on YOLO
             print("[INFO] YOLO took {:.6f} seconds".format(
-                end - start), onlyfiles[picture])
+                end - start), picture)
 
             # initialize our lists of detected bounding boxes, confidences, and
             # class IDs, respectively
@@ -125,6 +124,7 @@ def yolo(args):
 
             # ensure at least one detection exists
             if len(idxs) > 0:
+                singledict = []
                 # loop over the indexes we are keeping
                 for i in idxs.flatten():
                     # extract the bounding box coordinates
@@ -141,19 +141,20 @@ def yolo(args):
                     # print(x,y,x+w,y+h,text)
                     pred = [x, y, x+w, y+h]
                     predicted_label = text.split(':')
-                    singledict = {"xmin": x,
+                    singledict.append({"xmin": x,
                                   "ymin": y,
                                   "xmax": x+w,
                                   "ymax": y+h,
-                                  "Label": predicted_label[0]}
-                    boxdictionary.append(singledict)
+                                  "Label": predicted_label[0],
+                                  "confidence": confidences[i]})
+
                     if type(args["output"]) is str:
-                    	cv2.imwrite(args["output"]+'/objects'+'/'+onlyfiles[picture], image)
-            filedictionary = {onlyfiles[picture]: boxdictionary}
-            dictionary.append(filedictionary)
+                    	cv2.imwrite(args["output"]+'/objects'+'/'+picture, image)
+
+                jsonlabel[picture] = singledict
 
     with open('Images/JSON/data.json', 'w') as fp:
-        json.dump(dictionary, fp, indent=4)
+        json.dump(jsonlabel, fp, indent=4)
 
     return None
 
