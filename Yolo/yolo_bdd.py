@@ -1,6 +1,5 @@
 # USAGE
-# python yolo.py --input images/object-detection-crowdai --output output_images --yolo yolo-coco
-# python yolo.py --input images/object-autti --output output_images --yolo yolo-coco
+# python yolo_bdd.py --input images/object-bdd --output output_images --yolo yolo-coco
 
 # import the necessary packages
 import numpy as np
@@ -48,16 +47,27 @@ net = cv2.dnn.readNetFromDarknet(configPath, weightsPath)
 # load our input image and grab its spatial dimensions
 dictPath = os.path.sep.join([args["yolo"], "data.json"])
 onlyfiles = [f for f in listdir(args["input"]) if isfile(join(args["input"], f))]
-path = os.path.sep.join([args["input"], "labels.csv"])
-data = pd.read_csv(path)
-data = data.dropna()
-print(data.head())
-xmin = list(data.xmin)
-ymin = list(data.ymin)
-xmax = list(data.xmax)
-ymax = list(data.ymax)
-frame = list(data.Frame)
-label = list(data.Label)
+path = os.path.sep.join([args["input"], "bdd100k_labels_images_val.json"])
+with open(path) as f:
+    data = json.load(f)
+
+xmin = []
+ymin = []
+xmax = []
+ymax = []
+frame = []
+label = []
+
+for item in data:
+    for i in item['labels']:
+        if 'box2d' in i:
+            xmin.append(i['box2d']['x1'])
+            ymin.append(i['box2d']['y1'])
+            xmax.append(i['box2d']['x2'])
+            ymax.append(i['box2d']['y2'])
+            frame.append(item['name'])
+            label.append(i['category'])
+
 accuracy = 0
 total = 0
 boxdictionary = []
@@ -176,10 +186,10 @@ for picture in range(len(onlyfiles)): ##range(len(onlyfiles))
                                         #print(all_iou)
                                         for i in range(len(frame)):
                                                 if i == positions[big]:
-                                                        if all_iou[big] >= 0.5:                  
+                                                        if all_iou[big] >= 0.5:                       
                                                                 if (label[i] == ('car') or ('Car')) and ((w*h) > 10000):
                                                                     accuracy = accuracy + 1
-                                                                       
+
                                 predicted_label = text.split(':')
                                 singledict = {"xmin": x,
                                               "ymin": y,
