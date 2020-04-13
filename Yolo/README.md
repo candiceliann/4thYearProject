@@ -9,6 +9,18 @@ The dataset used for testing can be found [here](https://github.com/udacity/self
 
 Note: I dont think this one has been updated with the weights folder name changes, will do it later.
 
-CrowdAI Dataset - 59%
+Accuracies when looking at only the 'car' labels:
 
-Autti Dataset - 52%
+CrowdAI Dataset - 60%
+
+Autti Dataset - 51%
+
+BDD dataset - 38% 
+
+Accuracies when looking at only the 'car' labels and only the labels that matter (within a certain proximity of the vehicle):
+
+CrowdAI Dataset - 78%
+
+Autti Dataset - 65%
+
+BDD dataset - 83% 
