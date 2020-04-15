@@ -16,7 +16,9 @@ I put these images in a seperate sub directories (00021/ 0022/ 0023/ respectivel
 
 I also used had to resample this to use on the testing data - to do this change the fourth cell in kitti_lstm5 to the following:
 
-`sequence_list = []
+```python
+
+sequence_list = []
 lane_test_sequence = []
 lane_frames = []
 i = 0
@@ -48,7 +50,8 @@ for sequence in data:
                 lane_frame_sample_dict[str(j)] = frame_dict[str(j)][:3]
         lane_test_sequence.append(lane_frame_sample_dict)
     i += 1               
-np.array(sequence_list).shape`
+np.array(sequence_list).shape
+```
 
 
 
@@ -57,7 +60,9 @@ After this you need to re sample the new data - just use these two additional ce
 
 
 
-`ylane = []
+```python
+
+ylane = []
 list_lengths = []
 for sequence in lane_test_sequence:
     sequence_of_frames = []
@@ -70,12 +75,14 @@ for sequence in lane_test_sequence:
             frame_list.append(tuples[3])
         sequence_of_frames.append(frame_list)
     ylane.append(sequence_of_frames)
-ylane = np.array(ylane)`
+ylane = np.array(ylane)
+```
 
 
 
-`ynormlane = np.zeros(ylane.shape)
+```python
 
+ynormlane = np.zeros(ylane.shape)
 sample_list_lane = []
 for sample in range(0,ynormlane.shape[0]):
     list_0 = []
@@ -105,9 +112,6 @@ for sample in range(0,ynormlane.shape[0]):
         list_10.append(ylane[sample, clip, 10])
         list_11.append(ylane[sample, clip, 11])
     sample_list_lane.append([list_0, list_1, list_2, list_3, list_4, list_5, list_6, list_7, list_8, list_9, list_10, list_11])
-
-#print(sample_list_lane)
-
 sample_list_lane = np.array(sample_list_lane).astype(np.float)
 ynormlane = np.zeros(sample_list_lane.shape)
 y_minmax = np.zeros((sample_list_lane.shape[0], sample_list_lane.shape[1], 2))
@@ -123,9 +127,8 @@ y_newlane = np.zeros(y.shape)
 for sample in range(0, len(ynormlane)):
     for sets in  range(0, len(ynormlane[0])):
         for frame_value in range(0, len(ynormlane[0][0])):
-            y_newlane[sample, frame_value, sets] = ynormlane[sample, sets, frame_value]`
-
-
+            y_newlane[sample, frame_value, sets] = ynormlane[sample, sets, frame_value]
+```
 
 
 
@@ -133,6 +136,8 @@ for sample in range(0, len(ynormlane)):
 
 Change the testing sets to the following:
 
-`yte = y_newlane[:1, 1:150, :]
-Xte = y_newlane[:1, :149, :]`
+```python
+yte = y_newlane[:1, 1:150, :]
+Xte = y_newlane[:1, :149, :]
+```
 
