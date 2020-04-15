@@ -54,6 +54,21 @@ np.array(sequence_list).shape
 ```
 
 
+For the i value it follows as:
+
+File 				|    i value
+------------- 		| -------------
+label_02/0007.txt   |      0
+label_02/0010.txt   |      1
+label_02/0004.txt   |      2
+label_02/0005.txt   |      3
+label_02/0011.txt   |      4
+label_02/0001.txt   |      5
+label_02/0019.txt   |      6
+label_02/0018.txt   |      7
+label_02/0020.txt   |      8
+label_02/0008.txt   |      9
+label_02/0009.txt   |      10
 
 After this you need to re sample the new data - just use these two additional cells, they do the same thing as the others that look basically idenitcal so should just plug and play :)
 
