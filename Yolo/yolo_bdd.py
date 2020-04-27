@@ -12,6 +12,7 @@ from os.path import isfile, join
 import pandas as pd
 from collections import namedtuple
 import json
+import matplotlib.pyplot as plt
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
@@ -72,6 +73,10 @@ accuracy = 0
 total = 0
 boxdictionary = []
 dictionary = []
+AP_x = []
+AP_y = []
+counter_1 = 0
+counter_2 = 0
 
 def bb_intersection_over_union(boxA, boxB):
 	# determine the (x, y)-coordinates of the intersection rectangle
@@ -92,7 +97,7 @@ def bb_intersection_over_union(boxA, boxB):
 	# return the intersection over union value
 	return iou
 
-for picture in range(len(onlyfiles)): ##range(len(onlyfiles))
+for picture in range(500): ##range(len(onlyfiles))
         if '.jpg' in onlyfiles[picture]:        
                 image = cv2.imread(args["input"]+'/'+onlyfiles[picture])
                 (H, W) = image.shape[:2]
@@ -186,10 +191,11 @@ for picture in range(len(onlyfiles)): ##range(len(onlyfiles))
                                         #print(all_iou)
                                         for i in range(len(frame)):
                                                 if i == positions[big]:
-                                                        if all_iou[big] >= 0.5:                       
+                                                        if all_iou[big] >= 0.5:                  
                                                                 if (label[i] == ('car') or ('Car')) and ((w*h) > 10000):
                                                                     accuracy = accuracy + 1
-
+                                                                    counter_1 = counter_1 + 1
+                                                                                                                                               
                                 predicted_label = text.split(':')
                                 singledict = {"xmin": x,
                                               "ymin": y,
@@ -203,11 +209,55 @@ for picture in range(len(onlyfiles)): ##range(len(onlyfiles))
                                 if label[i] == ('car') or ('Car'):
                                     if (int(xmax[i]) - int(xmin[i])) * (int(ymax[i]) - int(ymin[i])) > 10000:
                                         total = total + 1
+                                        counter_2 = counter_2 + 1
                 cv2.imwrite(args["output"]+'/'+onlyfiles[picture], image)
                 if total > 0:
                         print('Accuracy = ', accuracy, total, accuracy/total)
+                        if counter_2 > 0:
+                                AP_y.append(counter_1/counter_2)
+                                AP_x.append(counter_1)
+                                counter_1 = 0
+                                counter_2 = 0
                 filedictionary = {onlyfiles[picture]: boxdictionary}
                 dictionary.append(filedictionary)
 
 with open('data.json', 'w') as fp:
         json.dump(dictionary, fp, indent=4)
+
+biggest = 0
+finalAP_y = []
+finalAP_x = []
+while len(AP_y) > 0:
+        for i in range(len(AP_y)):
+                if AP_y[i] >= biggest:
+                        biggest = AP_y[i]
+                        element = i
+        finalAP_y.append(AP_y[element])
+        finalAP_x.append(AP_x[element])
+        biggest = 0
+        AP_y.pop(element)
+        AP_x.pop(element)
+
+totalAP = 0
+for i in range(len(finalAP_x)):
+        if i > 0:
+                finalAP_x[i] = finalAP_x[i] + finalAP_x[i-1]
+
+for i in range(len(finalAP_x)):        
+        finalAP_x[i] = finalAP_x[i] / accuracy
+
+temp = []
+for i in range(len(finalAP_y)):
+        if finalAP_y[i] > 1:
+                temp.append(i)
+n = 0
+for i in range(len(temp)):
+        finalAP_x.pop(temp[i-n])
+        finalAP_y.pop(temp[i-n])
+        n = n + 1
+
+plt.plot(finalAP_x, finalAP_y)
+plt.xlabel('Recall')
+plt.ylabel('Precision')
+plt.grid()
+plt.show()
