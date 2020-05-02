@@ -3,7 +3,7 @@ import numpy as np
 import argparse
 import time
 import cv2
-import os, glob
+import os
 from os import listdir
 from os.path import isfile, join
 import pandas as pd
@@ -124,7 +124,7 @@ def yolo(args):
 
             # ensure at least one detection exists
             if len(idxs) > 0:
-                singledict = []
+                values = []
                 # loop over the indexes we are keeping
                 for i in idxs.flatten():
                     # extract the bounding box coordinates
@@ -141,20 +141,15 @@ def yolo(args):
                     # print(x,y,x+w,y+h,text)
                     pred = [x, y, x+w, y+h]
                     predicted_label = text.split(':')
-                    singledict.append({"xmin": x,
-                                  "ymin": y,
-                                  "xmax": x+w,
-                                  "ymax": y+h,
-                                  "Label": predicted_label[0],
-                                  "confidence": confidences[i]})
+                    values.append([float(classIDs[i]), x, y, x+w, y+h, predicted_label[0], confidences[i]])
 
                     if type(args["output"]) is str:
                     	cv2.imwrite(args["output"]+'/objects'+'/'+picture, image)
 
-                jsonlabel[picture] = singledict
+                jsonlabel[picture] = values
 
     with open('Images/JSON/data.json', 'w') as fp:
-        json.dump(jsonlabel, fp, indent=4)
+        json.dump(jsonlabel, fp)
 
     return None
 

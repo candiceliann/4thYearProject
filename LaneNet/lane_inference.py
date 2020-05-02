@@ -66,15 +66,15 @@ def test_lanenet_batch(src_dir, weights_path, save_dir, save_json=True):
     sess = tf.Session(config=sess_config)
 
     with sess.as_default():
-
         saver.restore(sess=sess, save_path=weights_path)
 
-        image_list = glob.glob('{:s}/**/*.jpg'.format(src_dir), recursive=True)
+        image_list = glob.glob('{:s}/**/*.png'.format(src_dir), recursive=True)
         avg_time_cost = []
         #json_gt = [json.loads(line) for line in open('/Users/mylesfoley/git/lanenet-lane-detection/ROOT_DIR/TUSIMPLE_DATASET/test_set/label_data.json')]
         lane_list = []
-        for index, image_path in tqdm.tqdm(enumerate(image_list), total=len(image_list)):
+        for index, image_path in tqdm.tqdm(enumerate(sorted(image_list)), total=len(image_list)):
 
+            print(image_path.split('/')[-1])
             image = cv2.imread(image_path, cv2.IMREAD_COLOR)
             image_vis = image
             image = cv2.resize(image, (512, 256), interpolation=cv2.INTER_LINEAR)
@@ -94,13 +94,14 @@ def test_lanenet_batch(src_dir, weights_path, save_dir, save_json=True):
                 raw_file=image_name
             )
             lane_list.append(postprocess_result['lane_data'])
+
             if save_json == True:
-                if os.path.isfile('Images/JSON/inf_data.json'):
-                    with open('Images/JSON/inf_data.json', 'a+') as json_file:
+                if index == 0:
+                    with open('Images/JSON/inf_data.json', 'w+') as json_file:
                         json.dump(postprocess_result['lane_data'], json_file)
                         json_file.write('\n')
                 else:
-                    with open('Images/JSON/inf_data.json', 'w+') as json_file:
+                    with open('Images/JSON/inf_data.json', 'a+') as json_file:
                         json.dump(postprocess_result['lane_data'], json_file)
                         json_file.write('\n')
             image_name = image_path.split('/')[-1]
