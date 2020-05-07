@@ -12,10 +12,3 @@ LaneNet parameters can be changed in the `LaneNet/config/global_config.py` file.
 Put images you want to test in the `Images/input` folder. Then go to the command line, cd to this directory and run `python main.py --input images/input --output images/output --yolo_weights Yolo/weights --lanenet_weights LaneNet/weights/tusimple_lanenet_vgg.ckpt`.
 
 The object detection output are be displayed in `Images/Output/objects`, the lanes are displayed in `Images/Output/lanes`, and the JSON outputs are in `Images/JSON`.
-
-## TODO
-1. [x] Fix LaneNet output image and check if json file outputs correctly
-2. [x] Put jsons into their own folder
-3. [x] Clean up unneccessary folders and README files
-4. [ ] Finish LSTM, integrate it into the model, train, optimize, and test it
-5. [ ] Optimize LaneNet parameters once model speed running on GPU is known (and yolo weights)

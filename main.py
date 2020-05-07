@@ -1,5 +1,6 @@
 from Yolo import yolo
 from LaneNet import lane_inference
+from LSTM import lstm
 import argparse
 
 ap = argparse.ArgumentParser()
@@ -17,6 +18,12 @@ ap.add_argument("-t", "--threshold", type=float, default=0.3,
     help="threshold when applyong non-maxima suppression")
 args = vars(ap.parse_args())
 
+# Run yolo
 yolo.yolo(args)
+
+# Run LaneNet
 lane_inference.test_lanenet_batch(src_dir=args["input"], weights_path=args["lanenet_weights"], save_json=True,
                            save_dir=args["output"]+'/lanes')
+
+# Detect whether a lane change has occured or not in the sequence
+lstm.laneChange()

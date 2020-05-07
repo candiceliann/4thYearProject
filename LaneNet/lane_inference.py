@@ -74,7 +74,6 @@ def test_lanenet_batch(src_dir, weights_path, save_dir, save_json=True):
         lane_list = []
         for index, image_path in tqdm.tqdm(enumerate(sorted(image_list)), total=len(image_list)):
 
-            print(image_path.split('/')[-1])
             image = cv2.imread(image_path, cv2.IMREAD_COLOR)
             image_vis = image
             image = cv2.resize(image, (512, 256), interpolation=cv2.INTER_LINEAR)

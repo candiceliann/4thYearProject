@@ -141,11 +141,14 @@ def yolo(args):
                     # print(x,y,x+w,y+h,text)
                     pred = [x, y, x+w, y+h]
                     predicted_label = text.split(':')
-                    values.append([float(classIDs[i]), x, y, x+w, y+h, predicted_label[0], confidences[i]])
+                    values.append([x, y, x+w, y+h, predicted_label[0], confidences[i]])
 
                     if type(args["output"]) is str:
                     	cv2.imwrite(args["output"]+'/objects'+'/'+picture, image)
 
+                jsonlabel[picture] = values
+            else:
+                values.append([0, 0, 0, 0, 0, 0])
                 jsonlabel[picture] = values
 
     with open('Images/JSON/data.json', 'w') as fp:
