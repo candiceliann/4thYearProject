@@ -11,8 +11,6 @@ The Autti dataset used for testing can be found [here](https://github.com/udacit
 
 The BDD dataset used for testing can be found [here](https://bdd-data.berkeley.edu/index.html). This is to be added in the `images` folder. Then run `python yolo_bdd.py --input images/object-bdd --output output_images --yolo yolo-coco`. 
 
-Note: I dont think this one has been updated with the weights folder name changes, will do it later.
-
 Accuracies when looking at only the 'car' labels:
 
 CrowdAI Dataset - 59%
