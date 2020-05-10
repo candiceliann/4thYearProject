@@ -4,12 +4,12 @@ The original model can be found [here](https://drive.google.com/drive/folders/1m
 
 To run the original model use `python yolo_video.py --input videos/overpass.mp4 --output output/overpass.avi --yolo yolo-coco` or whatever the video input name is and desired output name.
 
-### Accuracy Testing
-The CrowdAI dataset used for testing can be found [here](https://github.com/udacity/self-driving-car/tree/master/annotations) (Dataset 1). This is to be added in the `images` folder. Then run `python yolo_acc.py --input images/object-detection-crowdai --output output_images --yolo yolo-coco`. 
+### Accuracy Testing of Updated Model
+The CrowdAI dataset used for testing can be found [here](https://github.com/udacity/self-driving-car/tree/master/annotations) (Dataset 1). This is to be added in the `images` folder. Then run `python yolo_acc.py --input images/object-detection-crowdai --output output --yolo weights`. 
 
-The Autti dataset used for testing can be found [here](https://github.com/udacity/self-driving-car/tree/master/annotations) (Dataset 2). This is to be added in the `images` folder. Then run `python yolo.py --input images/object-autti --output output_images --yolo yolo-coco`. 
+The Autti dataset used for testing can be found [here](https://github.com/udacity/self-driving-car/tree/master/annotations) (Dataset 2). This is to be added in the `images` folder. Then run `python yolo.py --input images/object-autti --output output --yolo weights`. 
 
-The BDD dataset used for testing can be found [here](https://bdd-data.berkeley.edu/index.html). This is to be added in the `images` folder. Then run `python yolo_bdd.py --input images/object-bdd --output output_images --yolo yolo-coco`. 
+The BDD dataset used for testing can be found [here](https://bdd-data.berkeley.edu/index.html). This is to be added in the `images` folder. Then run `python yolo_bdd.py --input images/object-bdd --output output --yolo weights`. 
 
 Accuracies when looking at only the 'car' labels:
 
