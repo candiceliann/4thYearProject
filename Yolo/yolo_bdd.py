@@ -77,6 +77,7 @@ AP_x = []
 AP_y = []
 counter_1 = 0
 counter_2 = 0
+totaltime = 0
 
 def bb_intersection_over_union(boxA, boxB):
 	# determine the (x, y)-coordinates of the intersection rectangle
@@ -97,7 +98,7 @@ def bb_intersection_over_union(boxA, boxB):
 	# return the intersection over union value
 	return iou
 
-for picture in range(500): ##range(len(onlyfiles))
+for picture in range(len(onlyfiles)): ##range(len(onlyfiles))
         if '.jpg' in onlyfiles[picture]:        
                 image = cv2.imread(args["input"]+'/'+onlyfiles[picture])
                 (H, W) = image.shape[:2]
@@ -118,7 +119,7 @@ for picture in range(500): ##range(len(onlyfiles))
 
                 # show timing information on YOLO
                 print("[INFO] YOLO took {:.6f} seconds".format(end - start), onlyfiles[picture])
-
+                totaltime = totaltime + (end-start)
                 # initialize our lists of detected bounding boxes, confidences, and
                 # class IDs, respectively
                 boxes = []
@@ -221,9 +222,11 @@ for picture in range(500): ##range(len(onlyfiles))
                 filedictionary = {onlyfiles[picture]: boxdictionary}
                 dictionary.append(filedictionary)
 
-with open('data.json', 'w') as fp:
-        json.dump(dictionary, fp, indent=4)
+##with open('data.json', 'w') as fp:
+##        json.dump(dictionary, fp, indent=4)
 
+print("done")
+print("fps = ", 1 / (totaltime / len(onlyfiles)))
 biggest = 0
 finalAP_y = []
 finalAP_x = []
