@@ -5,22 +5,26 @@ The original model can be found [here](https://drive.google.com/drive/folders/1m
 To run the original model use `python yolo_video.py --input videos/overpass.mp4 --output output/overpass.avi --yolo yolo-coco` or whatever the video input name is and desired output name.
 
 ### Accuracy Testing
-The dataset used for testing can be found [here](https://github.com/udacity/self-driving-car/tree/master/annotations) (Dataset 1). This is to be added in the `images` folder. Then run `python yolo_acc.py --input images/object-detection-crowdai --output output_images --yolo yolo-coco`.
+The CrowdAI dataset used for testing can be found [here](https://github.com/udacity/self-driving-car/tree/master/annotations) (Dataset 1). This is to be added in the `images` folder. Then run `python yolo_acc.py --input images/object-detection-crowdai --output output_images --yolo yolo-coco`. 
+
+The Autti dataset used for testing can be found [here](https://github.com/udacity/self-driving-car/tree/master/annotations) (Dataset 2). This is to be added in the `images` folder. Then run `python yolo.py --input images/object-autti --output output_images --yolo yolo-coco`. 
+
+The BDD dataset used for testing can be found [here](https://bdd-data.berkeley.edu/index.html). This is to be added in the `images` folder. Then run `python yolo_bdd.py --input images/object-bdd --output output_images --yolo yolo-coco`. 
 
 Note: I dont think this one has been updated with the weights folder name changes, will do it later.
 
 Accuracies when looking at only the 'car' labels:
 
-CrowdAI Dataset - 60%
+CrowdAI Dataset - 59%
 
 Autti Dataset - 51%
 
-BDD dataset - 38% 
+BDD dataset - 26% 
 
 Accuracies when looking at only the 'car' labels and only the labels that matter (within a certain proximity of the vehicle):
 
 CrowdAI Dataset - 78%
 
-Autti Dataset - 65%
+Autti Dataset - 66%
 
-BDD dataset - 83% 
+BDD dataset - 78% 
